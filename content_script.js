@@ -1,11 +1,3 @@
-// chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-//   if (request === "getPassword") {
-//     const storedPassword = chrome.storage.local.get("password");
-//     sendResponse(storedPassword);
-//   }
-//   return true;
-// });
-
 function openOverlay() {
   const overlay = document.createElement('div');
   overlay.id = 'myNav';
@@ -202,43 +194,5 @@ function closeOverlay() {
   }
 }
 
-
-// next
-
-// document.addEventListener('submit', function (event) {
-//   event.preventDefault();
-
-//   const password = document.getElementById('password2').value;
-//   const confirmPasswordInput = document.getElementById('confirm-password');
-
-//   if (confirmPasswordInput !== null) {
-//     const confirmPassword = confirmPasswordInput.value;
-
-//     if (password === confirmPassword) {
-//       // Send message to background script to store the new password
-//       chrome.runtime.sendMessage({ cmd: 'storePassword', password }, function (response) {
-//         console.log('Password created');
-//         closeOverlay();
-//       });
-//     } else {
-//       alert('Passwords do not match');
-//     }
-//   }
-
-//   chrome.storage.local.get('password', function(data) {
-//     const storedPassword = data.password;
-
-//     if (password === storedPassword) {
-//       // Send message to background script to unlock the website
-//       chrome.runtime.sendMessage({ cmd: 'unlock' }, function (response) {
-//         console.log(response.result);
-//         closeOverlay();
-//       });
-//     } 
-//     else {
-//       alert('Passwords do not match');
-//     }
-//   });
-// });
 
 
